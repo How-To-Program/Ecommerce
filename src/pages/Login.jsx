@@ -12,7 +12,7 @@ const Container = styled.div`
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.5)
     ),
-    url("https://i.ibb.co/0Yz61Dt/Stylish-woman-in-hat-on-pink-red-background-isolated-space-smile-excited-hold-fan-of-100-dollars-mon.jpg"),
+    url("https://i.ibb.co/n7hGnJG/login.webp"),
     center;
     background-size: cover;
     display: flex;

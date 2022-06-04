@@ -12,7 +12,7 @@ const Container = styled.div`
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.5)
     ),
-    url("https://i.ibb.co/kgrT0Pz/young-stylish-sexy-woman-in-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio.jpg");
+    url("https://i.ibb.co/712YDRY/banner-img-1.webp");
     background-size: cover;
     display: flex;
     align-items: center;
