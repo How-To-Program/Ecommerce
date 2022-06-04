@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
         id: 1,
-        img: "https://i.ibb.co/wWNDtg3/woman-in-cart.png",
+        img: "https://i.ibb.co/bJ7V8YN/woman-in-cart.webp",
         title: "SUMMER SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS",
         bg: "f5fafd",
@@ -15,7 +15,7 @@ export const sliderItems = [
     },
     {
         id: 3,
-        img: "https://i.ibb.co/9GFKMX9/blog-2.png",
+        img: "https://i.ibb.co/Y3qLdsq/blog-2.webp",
         title: "POPULAR SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS",
         bg: "fbf0f4",
@@ -32,7 +32,7 @@ export const categories = [
     },
     {
         id: 2,
-        img:"https://i.ibb.co/R0pbjD8/Pretty-young-teenage-lady-holds-her-passport-documents-with-ticket-in-her-hands-isolated-on-green-wa.jpg",
+        img:"https://i.ibb.co/kh0RXgK/Pretty-young-teenage-lady-holds-her-passport-documents-with-ticket-in-her-hands-isolated-on-green-wa.webp",
         title: "LOUNGEWEAR LOVE",
         cat:"loungewear"
     },

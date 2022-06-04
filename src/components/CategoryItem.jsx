@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { mobile } from "../responsive"
+import React from 'react'
 
 const Container = styled.div`
     flex: 1;
@@ -40,10 +41,31 @@ const Button = styled.button`
 `
 
 const CategoryItem = ({item}) => {
+    const [loading, setLoading] = React.useState(true);
+    const ref = React.createRef();
+    React.useEffect(() => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setLoading(false);
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(ref.current);
+  
+      return () => {
+        observer.disconnect();
+      }
+    });
   return (
-    <Container key={item.id}>
+    <Container key={item.id} ref={ref}>
         <Link to={`/products/${item.cat}`}>
-            <Image src={item.img}/>
+            {
+                loading ? 
+                <span>'Loading...'</span> : 
+                <Image src={item.img} />
+            }
             <Info>
                 <Tittle>{item.title}</Tittle>
                 <Button>SHOP NOW</Button>

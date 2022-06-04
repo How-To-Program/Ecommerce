@@ -1,6 +1,7 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import React from 'react'
 
 const Container = styled.div`
     flex: 1;
@@ -61,10 +62,32 @@ const Icon = styled.div`
 `
 
 const Product = ({item}) => {
+    const [loading, setLoading] = React.useState(true);
+    const ref = React.createRef();
+    React.useEffect(() => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setLoading(false);
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(ref.current);
+  
+      return () => {
+        observer.disconnect();
+      }
+    });
+
   return (
-    <Container>
+    <Container ref={ref}>
         {/* <Circle /> */}
-        <Image src={item.img} />
+        {
+            loading ? 
+            <span>'Loading...'</span> : 
+            <Image src={item.img} />
+        }
         <Info>
             <Icon>
                 <ShoppingCartOutlined />

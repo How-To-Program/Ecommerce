@@ -82,6 +82,8 @@ const Slider = () => {
             setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
         }
     }
+
+
   return (
     <Container>
         <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -90,8 +92,8 @@ const Slider = () => {
         <Wrapper slideIndex={slideIndex}>
             {sliderItems.map((item) => (
                 <Slide key={item.id} bg={item.bg}>
-                    <ImgContainer>
-                        <Image src={item.img}/>
+                    <ImgContainer >
+                        <Image rel="preload" src={item.img}/>
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.title}</Title>
